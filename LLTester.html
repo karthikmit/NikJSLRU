@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<script src="ListNode.js"></script>
+<script src="LinkedList.js"></script>
+<script src="LinkedHashMap.js"></script>
+
+<script>
+    var list = new NIKLL.LinkedList();
+    list.addElement("0", "Karthik");
+    list.addElement("1", "Nivi");
+    list.addElement("2", "Diyon");
+
+    list.traverseElements(function(key, value){
+        document.writeln(key + " " + value);
+    });
+
+    list.removeEldestElement();
+    list.traverseElements(function(key, value){
+        document.writeln(key + " " + value);
+    });
+    document.writeln("<br>");
+
+    var hashMap = new NIKLL.LinkedHashMapLRU(2);
+    hashMap.put("10", "KartikAgain");
+    hashMap.put("11", "KartikAgain11");
+    hashMap.put("12", "KartikAgain12");
+    hashMap.put("13", "KartikAgain13");
+
+    document.writeln(hashMap.get("13"));
+</script>
+
+<body>
+
+</body>
+</html>
